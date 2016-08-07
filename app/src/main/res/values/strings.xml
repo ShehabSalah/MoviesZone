@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Movies Zone</string>
+
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content" translatable="false">MOVIES\nZONE</string>
+    <string name="pref_order_key" translatable="false">order</string>
+    <string name="popular" translatable="false">Popular</string>
+    <string name="top_rated" translatable="false">Top Rated</string>
+    <string name="title_activity_settings22">Settings</string>
+    <string name="poster_image">poster_image</string>
+    <string name="refresh">Refresh</string>
+</resources>

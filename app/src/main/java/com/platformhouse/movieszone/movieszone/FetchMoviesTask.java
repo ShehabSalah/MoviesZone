@@ -23,7 +23,7 @@ import java.util.ArrayList;
  */
 //This class request the Movies List in Json and formatted to ArrayList of MovieHolder Objects
 public abstract class FetchMoviesTask extends AsyncTask<String,Integer,ArrayList<MovieHolder>>{
-    final String API_KEY = [Your-API-Key];
+    final String API_KEY = "[YOUR-API-KEY]";
     final String LOG_TAG = FetchMoviesTask.class.getSimpleName();
     //Method getMoviesList responsible on getting the Json List of (Movies, videos and reviews)
     //according to Variable request
@@ -145,30 +145,3 @@ public abstract class FetchMoviesTask extends AsyncTask<String,Integer,ArrayList
     }
 
 }
-
-
-/*
-// ****** ( FetchMoviesTask Start ) ******
-private class FetchMoviesTask extends AsyncTask<String,Integer,ArrayList<MovieHolder>> {
-
-    @Override
-    protected void onPreExecute() {
-        Movies_list_progressBar.setVisibility(View.VISIBLE);
-    }
-    @Override
-    protected ArrayList<MovieHolder> doInBackground(String... params) {
-        return new ().get(params[0]);
-    }
-    @Override
-    protected void onProgressUpdate(Integer... values) {
-        super.onProgressUpdate(values);
-        if(Movies_list_progressBar != null)
-            Movies_list_progressBar.setProgress(values[0]);
-    }
-
-    @Override
-    protected abstract void onPostExecute(ArrayList<MovieHolder> movieList){
-        Movies_list_progressBar.setVisibility(View.INVISIBLE);
-        UpdateAdapter(movieList);
-    }
-}// ****** ( FetchMoviesTask Start ) *******/

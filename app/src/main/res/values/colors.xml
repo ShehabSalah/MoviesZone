@@ -3,4 +3,7 @@
     <color name="colorPrimary">#121212</color>
     <color name="colorPrimaryDark">#202020</color>
     <color name="colorAccent">#33B5E5</color>
+    <color name="moviesZonePrimary">#FF0099CC</color>
+    <color name="moviesZoneSecond">#007ba4</color>
+
 </resources>

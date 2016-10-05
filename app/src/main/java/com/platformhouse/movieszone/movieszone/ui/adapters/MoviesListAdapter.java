@@ -1,4 +1,4 @@
-package com.platformhouse.movieszone.movieszone;
+package com.platformhouse.movieszone.movieszone.ui.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,26 +7,28 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 
+import com.platformhouse.movieszone.movieszone.R;
+import com.platformhouse.movieszone.movieszone.data.movie.MovieColumnHolder;
+import com.platformhouse.movieszone.movieszone.util.Constants;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
-/**
- * Created by Shehab Salah on 7/28/16.
+/*
+ * Created by Shehab Salah on 8/18/16.
  */
-public class MoviesListCustomAdapter extends BaseAdapter {
-    private ArrayList<MovieHolder> moviesList;
+public class MoviesListAdapter extends BaseAdapter {
+    private ArrayList<Object> moviesList;
     private Context activity;
     private LayoutInflater inflater = null;
-    private final String imageDir = "http://image.tmdb.org/t/p/w342";
     PlaceHolder placeHolder;
+    MovieColumnHolder movieColumnHolder;
 
-    public MoviesListCustomAdapter(Context context, ArrayList<MovieHolder> moviesList) {
+    public MoviesListAdapter(Context context, ArrayList<Object> moviesList) {
         activity = context;
         this.moviesList = moviesList;
 
     }
-
     @Override
     public int getCount() {
         return moviesList.size() == 0 ? 0 : moviesList.size();
@@ -54,15 +56,13 @@ public class MoviesListCustomAdapter extends BaseAdapter {
         } else {
             placeHolder = (PlaceHolder) itemView.getTag();
         }
+        movieColumnHolder = (MovieColumnHolder) moviesList.get(position);
         Picasso.with(activity)
-                .load(imageDir + moviesList.get(position).getPoster())
+                .load(Constants.IMAGE_URL + movieColumnHolder.getPoster_path())
                 .placeholder(R.mipmap.placeholder_background)
                 .into(placeHolder.moviePoster);
-
-
         return itemView;
     }
-
     private class PlaceHolder {
         ImageView moviePoster;
     }

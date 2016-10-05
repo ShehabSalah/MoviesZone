@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#0099cc"
-    tools:context=".MoviesActivity"
+    android:name="com.platformhouse.movieszone.movieszone.ui.fragments.MoviesFragment"
     tools:ignore="MergeRootFrame"
     >
     <!-- The primary full-screen view. This can be replaced with whatever view
@@ -26,13 +26,6 @@
             android:textSize="50sp"
             android:textStyle="bold" />
 
-        <ProgressBar
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/Movies_list_progressBar"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="85dp" />
 
     </RelativeLayout>
 

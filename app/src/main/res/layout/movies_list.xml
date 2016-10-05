@@ -12,6 +12,6 @@
         android:verticalSpacing="0dp"
         android:horizontalSpacing="0dp"
         android:stretchMode="columnWidth"
-        android:numColumns="auto_fit" />
-
+        android:numColumns="auto_fit"
+        android:choiceMode="singleChoice"/>
 </LinearLayout>

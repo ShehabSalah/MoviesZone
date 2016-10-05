@@ -11,13 +11,17 @@
             android:id="@+id/movie_item_name_DetailsActivity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="16dp"
-            android:textSize="24sp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/activity_vertical_margin"
+            android:textSize="22sp"
             android:textColor="#fff"
             android:gravity="center_vertical"
             android:background="@drawable/background_with_shadow"
             android:layout_weight="0.5"/>
         <ScrollView
+            android:id="@+id/detail_scroll"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginTop="-5dp"
@@ -42,10 +46,9 @@
                         android:layout_weight="0"
                         android:layout_width="180dp"
                         android:layout_height="wrap_content"
-                        android:paddingEnd="24dp"
-                        android:paddingStart="0dp"
+                        android:layout_marginRight="10dp"
                         android:layout_gravity="center"
-                        android:adjustViewBounds="true"/>
+                        android:adjustViewBounds="true" />
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
@@ -62,7 +65,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
                                 android:paddingBottom="4dp"
-                                android:textSize="16sp"
+                                android:textSize="18sp"
                                 android:layout_weight="0.5"
                                 />
                             <TextView
@@ -70,10 +73,13 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
                                 android:paddingTop="4dp"
-                                android:textSize="14sp"
+                                android:textSize="18sp"
+                                android:paddingBottom="4dp"
                                 android:layout_weight="0.5"/>
+                            <include layout="@layout/favorite_button"/>
 
                         </LinearLayout>
+
 
                     </LinearLayout>
                 </LinearLayout>
@@ -85,20 +91,47 @@
                         android:id="@+id/movie_item_overview_DetailsActivity"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="16sp"
+                        android:textSize="14sp"
                         android:paddingTop="16dp"
                         android:paddingBottom="16dp"/>
                     <View
-                        android:id="@+id/action_divider"
+                        android:id="@+id/action_divider_trailer"
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:layout_below="@+id/movie_item_overview_DetailsActivity"
                         android:background="@android:color/darker_gray"/>
                 </RelativeLayout>
-
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/trailer_name"
+                    android:text="@string/trailers"
+                    android:textSize="22sp"
+                    android:paddingTop="14dp"
+                    android:paddingBottom="14dp"/>
+                <com.platformhouse.movieszone.movieszone.ui.list_view_template.ListViewTemplate
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/trailer_listview"/>
+                <View
+                    android:id="@+id/action_divider_review"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:paddingTop="14dp"
+                    android:background="@android:color/darker_gray"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/reviews_name"
+                    android:text="@string/reviews"
+                    android:textSize="22sp"
+                    android:paddingTop="14dp"
+                    android:paddingBottom="14dp"/>
+                <com.platformhouse.movieszone.movieszone.ui.list_view_template.ListViewTemplate
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/review_listview"/>
             </LinearLayout>
         </ScrollView>
-
     </LinearLayout>
-
 </RelativeLayout>

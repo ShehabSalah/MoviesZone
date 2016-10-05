@@ -5,7 +5,7 @@
     android:id="@+id/details_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetailsActivity"
+    tools:context="com.platformhouse.movieszone.movieszone.ui.activities.DetailsActivity"
     tools:ignore="MergeRootFrame"
     >
 
